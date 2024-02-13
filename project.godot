@@ -20,6 +20,11 @@ config/icon="res://icon.svg"
 window/size/viewport_width=450
 window/size/viewport_height=450
 
+[editor]
+
+version_control/plugin_name="GitPlugin"
+version_control/autoload_on_startup=true
+
 [input]
 
 mine_right_click={
