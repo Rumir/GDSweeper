@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfbmp40u3qi2u"]
+
+[ext_resource type="Script" path="res://MineCell.gd" id="1_hc4b5"]
+[ext_resource type="Texture2D" uid="uid://dn8p5bs817c1g" path="res://images/GDSweep_mineFlag.png" id="2_phym2"]
+
+[sub_resource type="FontVariation" id="FontVariation_0x7p7"]
+variation_embolden = 1.2
+
+[node name="MineCell" type="Button"]
+layout_direction = 2
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 48.0
+offset_bottom = 48.0
+theme_override_fonts/font = SubResource("FontVariation_0x7p7")
+theme_override_font_sizes/font_size = 11
+toggle_mode = true
+script = ExtResource("1_hc4b5")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 24.0
+offset_bottom = 24.0
+mouse_filter = 2
+
+[node name="FlagTexture" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 23.0
+offset_bottom = 23.0
+texture = ExtResource("2_phym2")
+expand_mode = 1
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://clx8w41u5ltja"]
+
+[ext_resource type="Script" path="res://FieldControl.gd" id="1_gqvo4"]
+
+[node name="Minefield" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 305.0
+offset_bottom = 305.0
+script = ExtResource("1_gqvo4")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 2
+offset_right = 285.0
+offset_bottom = 285.0
+color = Color(0.286275, 0.286275, 0.286275, 1)
